@@ -1,0 +1,8 @@
+type Hydro {
+  location: String!,
+  water_temp: Float!,
+  air_temp: Float!,
+  tds: Int!,
+  ph: Float,
+  humidity: Float!
+}
