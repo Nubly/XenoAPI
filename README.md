@@ -39,5 +39,28 @@ By default, this hosts on port 8000 via `uvicorn`.
 
 Interface is configurable as well, I've just found the most success using [WSGI](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) so far.
 
+## GraphQL Methods/Endpoints
+
+- `/api/v1/hydro`
+  - GET: Currently returns a string telling you the API is working.
+  - POST: Following the database schema, will insert the data into the DB
+    - Returns JSON result of `graphql_sync` as well as status code
+
+## TODO
+
+- Document environment variable requirements or change to some other config method
+  - Config file?
+    - YAML?
+    - TOML?
+    - Flat?
+- Streamline DB deployment
+  - Provide files for replicatable schema setup
+  - Containerize? Currently, just running stock mariadb container from Docker Hub
+    - Could be templated to specify the DB connection type within `core.py`
+- Document supported GraphQL queries/mutations further
+- Add more GraphQL methods as necessary
+- Publish OpenAPI spec
+- Republish GraphQL playground
+
 ## Authors
 Alex Denofre
