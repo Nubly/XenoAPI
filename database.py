@@ -3,8 +3,9 @@ from core import app
 
 db = SQLAlchemy(app)
 
+
 class Hydro(db.Model):
-    __tablename__ = 'data'
+    __tablename__ = "data"
     location = db.Column(db.String(100), primary_key=True)
     water_temp = db.Column(db.Float)
     air_temp = db.Column(db.Float)
@@ -18,8 +19,7 @@ class Hydro(db.Model):
     @classmethod
     def create(self, loc, wt, at, tds, hum, ph=-20):
         hydro = self(
-           location=loc, water_temp=wt, air_temp=at, tds=tds,
-           ph=ph, humidity=hum
+            location=loc, water_temp=wt, air_temp=at, tds=tds, ph=ph, humidity=hum
         )
         db.session.add(hydro)
         db.session.commit()
