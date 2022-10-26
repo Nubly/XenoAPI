@@ -1,0 +1,4 @@
+type Query {
+  get_hydro(location: String!): [Hydro]
+  get_all_hydro: [Hydro]
+}
