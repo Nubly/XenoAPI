@@ -2,15 +2,12 @@
 
 GraphQL API code for the [Xenoponics](https://github.com/Nubly/Xenoponics) project.
 
-Runs on a combination of Ariadne, MariaDB, and Flask.
+Runs on a combination of Ariadne, FastAPI, and Flask.
 
 ## Requirements
-- `python3 >= 3.8`
-- MariaDB or other SQL DB you'd like to enter information into
-  - TODO: Include that in this project? Containerize it, include `podman` files for `podman play kube` or something 
-- Ability to install things from PyPI
+- `python3 >= 3.11`
 
-The SQL database should follow the following schema (for now):
+Databases used with this should be time-series, or should follow the following schema (for now):
 | Key        | Variable type [default]         |
 | :--        | :--                             |
 | location	 | varchar(100)	                   |
@@ -48,11 +45,6 @@ Interface is configurable as well, I've just found the most success using [WSGI]
 
 ## TODO
 
-- Document environment variable requirements or change to some other config method
-  - Config file?
-    - YAML?
-    - TOML?
-    - Flat?
 - Streamline DB deployment
   - Provide files for replicatable schema setup
   - Containerize? Currently, just running stock mariadb container from Docker Hub
@@ -63,4 +55,4 @@ Interface is configurable as well, I've just found the most success using [WSGI]
 - Republish GraphQL playground
 
 ## Authors
-Alex Denofre
+Alex Denofre (@Nubly)
