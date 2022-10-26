@@ -1,0 +1,11 @@
+# Default settings for XenoAPI
+
+[sqlalchemy]
+SQLALCHEMY_TRACK_MODIFICATIONS = false
+
+[database]
+host = "localhost"
+port = 3306
+proto = "sqlite"
+user = "svc_sqlite"
+# pass = "REPLACE_ME"
